@@ -34,7 +34,7 @@ class StoreLoginView(APIView):
                         'token': token,
                         'store_id': store.store_id,
                         'name': store.name
-                    })
+                    }, status=status.HTTP_200_OK)
                 else:
                     return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
             except Store.DoesNotExist:
@@ -86,7 +86,7 @@ class CustomerLoginView(APIView):
                         'token': token,
                         'customer_id': customer.customer_id,
                         'name': customer.name
-                    })
+                    }, status=status.HTTP_200_OK)
                 else:
                     return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
             except Customer.DoesNotExist:

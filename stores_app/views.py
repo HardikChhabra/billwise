@@ -11,12 +11,9 @@ from .serializers import (
     ProductSerializer,
     BillSerializer,
     CreateBillSerializer,
-    BasicCustomerSerializer,
-    ProductAnalyticsSerializer,
-    BillItemSerializer
+    ProductAnalyticsSerializer
 )
-from django.db.models import Sum, F, ExpressionWrapper, DecimalField, Count, Value, FloatField
-from django.db.models.functions import Coalesce
+from django.db.models import F, ExpressionWrapper, DecimalField
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status

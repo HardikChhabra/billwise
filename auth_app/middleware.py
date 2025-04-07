@@ -28,7 +28,7 @@ class JWTAuthMiddleware:
             request.user_type = user_type
 
             # For store-specific endpoints, validate the store
-            if user_type == 'store' and request.path.startswith('/api/stores/'):
+            if user_type == 'store' and request.path.startswith('/stores/'):
                 try:
                     store = Store.objects.get(email=email)
                     request.store_id = store.store_id
@@ -36,7 +36,7 @@ class JWTAuthMiddleware:
                     return JsonResponse({"error": "Invalid store credentials"}, status=401)
             
             # For customer-specific endpoints, validate the customer
-            elif user_type == 'customer' and request.path.startswith('/api/customers/'):
+            elif user_type == 'customer' and request.path.startswith('/customers/'):
                 try:
                     customer = Customer.objects.get(email=email)
                     request.customer_id = customer.customer_id
