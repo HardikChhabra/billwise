@@ -1,10 +1,9 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from rest_framework.generics import RetrieveUpdateAPIView, ListAPIView
-from auth_app.models import Customer
+from rest_framework.generics import ListAPIView
 from stores_app.models import Bill
-from .serializers import CustomerProfileSerializer, CustomerBillSerializer
+from .serializers import CustomerBillSerializer
 
 class CustomerBillsView(ListAPIView):
     serializer_class = CustomerBillSerializer

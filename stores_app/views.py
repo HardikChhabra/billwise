@@ -1,5 +1,4 @@
-from django.db.models import Sum, F, Value, FloatField, Q, Count
-from django.db.models.functions import Coalesce
+from django.db.models import F
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status

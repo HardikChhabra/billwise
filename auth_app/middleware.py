@@ -9,7 +9,7 @@ class JWTAuthMiddleware:
 
     def __call__(self, request):
         # Exclude auth endpoints from token validation
-        if request.path.startswith('/api/auth/'):
+        if request.path.startswith('/auth/'):
             return self.get_response(request)
 
         # Check for Authorization header
