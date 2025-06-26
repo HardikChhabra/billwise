@@ -2,3 +2,4 @@ Django
 djangorestframework
 PyJWT
 python_bcrypt
+gunicorn
