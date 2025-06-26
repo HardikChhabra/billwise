@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-your-secret-key-here'
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['billwise-0hif.onrender.com']
 
 # Application definition
 INSTALLED_APPS = [
