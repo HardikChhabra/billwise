@@ -11,6 +11,9 @@ class JWTAuthMiddleware:
         # Exclude auth endpoints from token validation
         if request.path.startswith('/auth/'):
             return self.get_response(request)
+        # Exclude readme endpoint from validation
+        elif request.path == "/":
+            return self.get_response(request)
 
         # Check for Authorization header
         auth_header = request.headers.get('Authorization')
